@@ -146,9 +146,6 @@ This confirms correct half-wave rectification behavior.
 This guide describes how to install, set up, and use the **Rectification** laboratory project.  
 The repository contains **assignment instructions**, **theoretical analysis**, **Multisim simulations**, **graphs**, and **experimental lab results** related to **half-wave** and **full-wave (bridge) rectification**.
 
-Repository:  
-https://github.com/Electronics-aka-Uniwa/Rectification.git
-
 ---
 
 ## Prerequisites
