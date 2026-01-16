@@ -29,18 +29,17 @@
 </p>
 
 <p align="center">
-  Supervisor: Anastasios Tsilikounas, Laboratory Teaching Staff
+  Supervisor: Eleni Tsalera, Laboratory Teaching Staff
 </p>
 <p align="center">
-  <a href="https://ice.uniwa.gr/en/emd_person/anastasios-tsilikounas/" target="_blank">UNIWA Profile</a> ·
-  <a href="https://www.linkedin.com/in/anastasios-tsilikounas-31111566/" target="_blank">LinkedIn</a>
+  <a href="https://www.researchgate.net/profile/Eleni-Tsalera-2" target="_blank">UNIWA Profile</a>
 </p>
 
 <p align="center">
-  Co-supervisor: Georgios Antoniou, Laboratory Teaching Staff
+  Co-supervisor: Michalis Diamantopoulos, Lecturer in Applications
 </p>
 <p align="center">
-  <a href="https://ice.uniwa.gr/en/emd_person/georgios-antoniou/" target="_blank">UNIWA Profile</a>
+  <a href="https://ice.uniwa.gr/emd_person/22674/" target="_blank">UNIWA Profile</a>
 </p>
 
 <p align="center">
@@ -51,9 +50,12 @@
 
 # Project Overview
 
-This document is a laboratory report for the **Circuit Theory** course within the **Department of Informatics and Computer Engineering** at the **University of West Attica**.
+The project investigates multiple rectification techniques through:
+- **Theoretical analysis**
+- **Computer simulation using Multisim**
+- **Experimental laboratory validation**
 
-The project focuses on the **study and analysis of the resonance effect in RLC circuits**. It explores the behavior of **resistors, inductors, and capacitors** when connected in **series** and **parallel** configurations across varying frequencies.
+These approaches ensure a complete understanding of rectifier operation and real-world behavior.
 
 ---
 
@@ -72,130 +74,218 @@ The project focuses on the **study and analysis of the resonance effect in RLC c
 | 5 | `lab2a/` | Lab 2a: Diode conducts analysis images, graphs, and Multisim file |
 | 6 | `lab2b/` | Lab 2b: Diode not conducts experiment images, graphs, and Multisim file |
 | 7 | `lab3b/` | Lab 3b: Bridge and double rectification experiments, images, graphs, Multisim files |
-| 8 | `multisimm/` | Multisim projects and screenshots (Q2, Q3, Q6) |
-| 9 | `photos-in-labb/` | Lab photos and equipment in action |
-| 10 | `questionss/` | Questions related to the lab |
-| 11 | `README.md` | Repository overview and instructions |
+| 8 | `photos-in-lab/` | Lab photos and equipment in action |
+| 9 | `questions/` | Questions related to the lab |
+| 10 | `README.md` | Repository overview and instructions |
 
 ---
 
-## Key Contents
+## Core Modules
 
-The report is structured into:
-
-- **Theoretical Analysis**  
-- **Software Simulations** using *Multisim*  
-- **Experimental Laboratory Results**
-
----
-
-## 1. RLC Series Circuit
-
-**Theory:**  
-Analysis of the frequency at which the **inductive reactance (Xₗ)** and **capacitive reactance (Xc)** cancel each other out.
-
-**Key Observations:**
-
-- The **impedance (Z)** becomes equal to the **ohmic resistance (R)** at resonance.
-- **Maximum current flow** occurs at the resonant frequency.
-- **Overvoltage phenomena** are observed across the capacitor and inductor.
-
-**Formula Used:**  
-
-$$
-f_r = \frac{1}{2\pi\sqrt{LC}}
-$$
-
-Where:  
-- \(f_r\) = resonant frequency  
-- \(L\) = inductance  
-- \(C\) = capacitance
-
+### 1. Simple Rectification with Resistance
+- Mathematical analysis of half-wave rectification  
+- Multisim simulation of the circuit  
+- Breadboard implementation using:
+  - **4.7 kΩ resistor**
+  - **Silicon diode**
 
 ---
 
-## 2. RLC Parallel Circuit
-
-- Theoretical solutions and **simulation results** for parallel RLC configurations.  
-- Detailed analysis provided in the report (pages 12–17).
-
----
-
-## Laboratory Equipment
-
-The experimental work utilized the following tools:
-
-- **Multimeters** (Analog and Digital)  
-- **Oscilloscope**  
-- **Breadboard**  
-- **Passive Components:**  
-  - Resistors  
-  - Capacitors  
-  - Inductors
+### 2. Simple Rectification with Diode-Switch (Parts A & B)
+- Detailed examination of diode-switch behavior  
+- Analysis of conduction and cutoff states during input signal cycles  
 
 ---
 
-# Installation & Setup Guide
+### 3. Double Rectification with Bridge
+- Design and implementation of **full-wave rectification**
+- Use of a **diode bridge** to utilize both half-cycles of the input waveform
+- Comparison with single rectification in terms of output stability and efficiency
 
-This repository contains laboratory simulations and analysis for **Circuit Theory**, focusing on **RLC series and parallel circuits** and their resonance behavior.  
+---
 
-All simulations are implemented in **NI Multisim**.
+## Laboratory Equipment Used
+
+- **Power Supply**:
+  - DC Power Supply  
+  - Analog & Digital Training System (**M21-7000A**)
+
+- **Measurement Tools**:
+  - Oscilloscope: **HAMEG HM203-5 / HM303-6**
+  - Digital Multimeter Bench: **MCP MT8045**
+
+- **Components**:
+  - Breadboard  
+  - Silicon diodes  
+  - **4.7 kΩ resistors**
+
+---
+
+## Key Findings
+
+### Theoretical vs. Experimental Results
+For a simple resistive rectification circuit with an **8 V<sub>p-p</sub>** input signal:
+- **Maximum output voltage (V<sub>max</sub>)** ≈ **3.4 V**
+- **Average output voltage (V<sub>μ</sub>)** ≈ **1.3 V**
+
+These results closely match theoretical expectations when diode voltage drops are considered.
+
+---
+
+### Waveform Observation
+- During the **positive half-cycle**, the diode is forward-biased, allowing current flow and producing a sinusoidal output.
+- During the **negative half-cycle**, the diode is reverse-biased, resulting in **zero output voltage**.
+
+This confirms correct half-wave rectification behavior.
+
+---
+
+# Installation & Setup Guide  
+**Rectification Circuits — Electronics (UNIWA)**
+
+This guide describes how to install, set up, and use the **Rectification** laboratory project.  
+The repository contains **assignment instructions**, **theoretical analysis**, **Multisim simulations**, **graphs**, and **experimental lab results** related to **half-wave** and **full-wave (bridge) rectification**.
+
+Repository:  
+https://github.com/Electronics-aka-Uniwa/Rectification.git
 
 ---
 
 ## Prerequisites
 
-### Required Software
-- **NI Multisim 14** (or later)  
-  Ensure your system meets the requirements for running `.ms14` files.  
-  Download from [NI Multisim](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html).
-
-### Optional Software
-- **PDF Viewer** for documentation: `Coordination.pdf` / `Συντονισμός.pdf`
+Before using this project, ensure the following requirements are met.
 
 ---
 
-## Installation Steps
+### 1. Software Requirements
+
+#### NI Multisim
+- **NI Multisim 14 or newer**
+- Required for:
+  - Opening and running rectifier circuit simulations
+  - Observing rectified waveforms
+  - Measuring peak, average, and ripple voltages
+
+Used in folders:
+- `lab1b/`
+- `lab2a/`
+- `lab2b/`
+- `lab3b/`
+
+---
+
+#### PDF Reader
+- Any modern PDF reader (Adobe Reader, browser-based viewer, etc.)
+- Required to open:
+  - Assignment instructions
+  - Theoretical documentation (English & Greek)
+
+---
+
+#### Image Viewer
+- Any standard image viewer
+- Required for viewing:
+  - Lab photos
+  - Waveform graphs
+  - Multisim screenshots (`.png` files)
+
+---
+
+### 2. Hardware Requirements (Optional – Physical Lab)
+
+Required **only if** you intend to reproduce the experiments physically in a laboratory.
+
+- **Analog & Digital Training System:** M21-7000A  
+- **DC Power Supply**
+- **Oscilloscope:** HAMEG HM203-5 or HM303-6  
+- **Digital Multimeter:** MCP MT8045  
+- **Electronic Components**
+  - Silicon diodes  
+  - Resistors: **4.7 kΩ**  
+  - Breadboard  
+
+> Hardware is **not required** for theoretical study or Multisim simulations.
+
+---
+
+## Installation & Setup
 
 ### 1. Clone the Repository
+
 ```bash
-git clone https://github.com/Circuit-Theory/Coordination.git
+git clone https://github.com/Electronics-aka-Uniwa/Rectification.git
+cd Rectification
 ```
 
-### 2. Navigate to Project Directory
+### 2. Read Theoretical Documentation
+Open the files in the `docs/` directory:
+- English: `Rectification.pdf`
+- Greek: `Ανόρθωση.pdf`
+
+These documents cover:
+- Half-wave rectification
+- Full-wave (bridge) rectification
+- Diode conduction and cutoff
+- Voltage drop and efficiency considerations
+
+### 3. Review Assignment Instructions
+Navigate to the `assign/` folder and open:
+- English: `Exercise-5th-Rectification.pdf`
+- Greek: Άσκηση-5η-Ανόρθωση.pdf
+
+These files define:
+- Required circuits
+- Measurement procedures
+- Analysis questions and expected results
+
+### 4. Run Multisim Simulations
+#### Simple Rectification
+1. Open NI Multisim.
+2. Navigate to:
 ```bash
-cd Coordination
+lab1b/
 ```
-Ensure the following folder structure exists:
+3. Open the provided Multisim file.
+4. Run the simulation.
+5. Observe:
+    - Half-wave rectified output
+    - Diode conduction during positive half-cycles
+
+#### Diode-Switch Experiments
+1. Open Multisim.
+2. Navigate to:
 ```bash
-assign/
-docs/
-multisim/
+lab2a/   (diode conducts)
+lab2b/   (diode does not conduct)
 ```
+3. Open and run the circuit files.
+4. Observe:
+    - Conduction and cutoff regions
+    - Output waveform differences
+
+### Bridge (Full-Wave) Rectification
+1. Open Multisim.
+2. Navigate to:
+```bash
+lab3b/
+```
+3. Open the bridge rectifier project files.
+4. Run the simulation.
+5. Observe:
+    - Full-wave rectified output
+    - Improved output stability compared to half-wave rectification
 
 ---
 
-## Multisim Simulation Files
+## View Experimental Results
+- Graphs & Measurements
+  - Found in `lab2a/`, `lab2b/`, and `lab3b/`
+- Multisim Screenshots
+  - Included in the corresponding lab folders
+- Laboratory Photos
+  - `photos-in-lab/`
 
-The repository includes two key simulation files:
-
-| File  | Description |
-|------:|-------------|
-| multisim/CoordinationSerial.ms14 |  RLC series circuit simulation |
-| multisim/CoordinationParallel.ms14 |  RLC parallel circuit simulation |
-
-
-### 3. Open a Simulation in Multisim
-- Launch NI Multisim.
-- Select File → Open.
-- Navigate to the `multisim/` folder.
-- Open the desired `.ms14` file (series or parallel circuit).
-- Wait for the circuit topology to load.
-
----
-
-## Open the Documentation
-1. Navigate to the `docs/` directory
-2. Open the report corresponding to your preferred language:
-    - English: `Coordination.pdf`
-    - Greek: `Συντονισμός.pdf`
+These materials document the comparison between:
+- Theoretical calculations
+- Simulation results
+- Experimental measurements
